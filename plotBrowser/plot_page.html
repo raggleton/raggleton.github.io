@@ -158,6 +158,7 @@
       var link = document.createElement("a");
       link.className = "img-thumbnail";
       link.href = plotFilename;
+      link.target = "_blank";
       col.appendChild(link);
 
       var img = document.createElement("img");
@@ -232,6 +233,7 @@
       link.className = "img-thumbnail";
       plotFilename = generatePlotNameFromSelectors(prefix);
       link.href = plotFilename;
+      link.target = "_blank";
       col.appendChild(link);
 
       var img = document.createElement("img");
