@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>My Mac Setup</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+    <style>
+      body {
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+      };
+
+      code {
+        font-family:Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New, monospace;
+      }
+    </style>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <div class="page-header">
+      <h1>My Mac Setup</h1>
+    </div>
+
+    This is a brief guide to my Macbook Pro setup. It's a reminder for me, and for anyone else who is interested. My work is mainly focussed on scientific data analysis, mainly in Python, so it's biased towards that and not some node/web stuff.
+
+    The order is probably not super crucial, although I have noted where it is.
+
+    <h3>Package Manager</h3>
+    I have chosen homebrew as my package manager. I have used MacPorts as well, but decided to change to see what the fuss is about. Note that homebrew installs binaries into <code>/usr/local/bin</code>.
+    I guess that some of this could be automated via brew casks.
+
+    <br>
+    <br>
+    <b>TODO:</b> add links.
+
+    <h2>Basics</h2>
+
+    <ul>
+      <li>Chrome</li>
+      <li>Firefox</li>
+      <li>Antivirus (not a great believer, but Uni policy)</li>
+      <li>Google Drive</li>
+      <li>Dropbox</li>
+      <li>f.lux</li>
+      <li>Android File Transfer</li>
+      <li>Spectacle (keyboard control window layout)</li>
+      <li>Disk Inventory X</li>
+      <li>Unarchiver</li>
+      <li>Customise Dock:  <code>defaults write com.apple.dock autohide-time-modifier -float 0.5; defaults write com.apple.Dock autohide-delay -float 0; killall Dock</code></li>
+      <li>Customise Finder: <code>defaults write com.apple.finder ShowStatusBar -bool true; defaults write com.apple.finder ShowPathbar -bool true</code></li>
+      <li>Setup <code>~/.bash_profile</code></li>
+    </ul>
+
+    <h3>Chrome Extensions</h3>
+
+    <ul>
+      <li>Dont fuck with paste</li>
+      <li>GitHub widescreen</li>
+      <li>h264ify</li>
+      <li>httpseverywhere</li>
+      <li>pushbullet</li>
+      <li>Sessionbuddy</li>
+      <li>Tabs Outliner</li>
+      <li>The Great Suspender</li>
+      <li>Toggle Switch Recent Last Tabs</li>
+      <li>uBlock origin</li>
+    </ul>
+
+    <h2>Communications</h2>
+
+    <ul>
+      <li>Setup Mail with many accounts</li>
+      <li>Skype</li>
+      <li>Slack</li>
+      <li>Viber</li>
+      <li>Whatsapp</li>
+      <li>Vidyo</li>
+    </ul>
+
+    <h2>General Work (non-analysis)</h2>
+
+    <ul>
+      <li>Evernote</li>
+      <li>Todoist</li>
+      <li>iWork (in particular Keynote becasue powerpoint sucks)</li>
+      <li>Mactex (and update Tex live)</li>
+      <li>jaxodraw (requires Mactex, see notes below)</li>
+      <li>Sublime Text</li>
+    </ul>
+
+    <h3>Sublime Packages</h3>
+    <ul>
+      <li>Package control</li>
+      <li>alignment</li>
+      <li>brackethighlighter</li>
+      <li>Case conversion</li>
+      <li>File diffs</li>
+      <li>Molokai extended</li>
+      <li>Open url</li>
+      <li>Open include</li>
+      <li>Pretty json</li>
+      <li>requirementstxt</li>
+      <li>sftp</li>
+      <li>sidebarenhancments</li>
+      <li>togglewords</li>
+      <li>trailingspaces</li>
+      <li>wordhighlight</li>
+    </ul>
+
+    <h3>jaxodraw setup</h3>
+    Setting up jaxodraw is a bit involved: the dmg doesn't work, and you have to run the JAR file manually.
+    <ol>
+      <li>Download the jar file</li>
+      <li>Run it using <code>java -d32 -jar jaxodraw-2.1-0.jar</code>. <b>The <code>-d32</code> is needed to stop it crashing when drawing gluons.</b></li>
+      <li>Running it will automatically download the required java 6 if it isn't already installed.</li>
+      <li>To save as EPS, you will need to download and install the axodraw4j.sty file: <code>mkdir -p ~/Library/texmf/tex/latex/; cp axodraw4j.sty ~/Library/texmf/tex/latex/axodraw4j.sty</code></li>
+    </ol>
+
+    <h2>Media</h2>
+    <ul>
+      <li>VLC</li>
+      <li>Spotify</li>
+      <li>Amazon Music</li>
+      <li>Google Music</li>
+      <li><code>pip install youtube-dl</code></li>
+    </ul>
+
+    <h2>Scientific Work</h2>
+    <ul>
+      <li>iTerm (better than the included Terminal app)</li>
+      <li>xQuartz (to replace X11)</li>
+      <li>Xcode commandline tools (<code>xcode-select --install</code>)</li>
+      <li>Homebrew (requires Xcode tools)</li>
+      <li>vim (<code>brew install vim</code>). Also installs python2, perl, and ruby.</li>
+      <li>Setup <code>~/.vimrc</code></li>
+      <li>Git (<code>brew install git</code>)</li>
+      <li>Setup <code>~/.gitconfig</code></li>
+      <li><code>brew install graphviz</code></li>
+      <li><code>brew tap homebrew/science</code></li>
+    </ul>
+
+    <h2>Python setup</h2>
+      Try and use python3 for as much as possible. Although given a lot of code still requires python2, may also be worth pip2-installing the packages there as well. (Note that <code>pip2</code> refers to the python2 installation, and <code>pip3</code> to the python3 installation. Similarly if you install ipython in both, use <code>ipython2</code> and <code>ipython3</code> - just <code>ipython</code> will refer to the one you installed last (I think!)).
+      <br>
+      <ul>
+        <li><code>brew install python3</code></li>
+        <li><code>brew install homebrew/science/hdf5</code></li>
+        <li><code>pip3 install virtualenv virtualenvwrapper</code></li>
+        <li>Setup virtualenvwrapper by adding to <code>~/.bash_profile</code>: <code>mkdir $HOME/.virtualenvs;export WORKON_HOME=$HOME/.virtualenvs;export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3;source /usr/local/bin/virtualenvwrapper.sh</code></li>
+      </ul>
+      You may wish to install the following into a virtualenv, although a system-wide copy will be needed for PyROOT:
+      <ul>
+        <li><code>pip3 install numpy scipy ipython jupyter matplotlib xlrd numexpr bottleneck tables xlrd pandas bokeh plotly seaborn scikit-learn</code></li>
+        <li>Setup Jupyter to use sublime keybindings, and widescreen, by putting the following into <code>~/.jupyter/custom/custom.js</code> (need to mkdir <code>~/.jupyter/custom</code>) (shamelessly stolen from <a href="http://blog.rtwilson.com/how-to-get-sublime-text-style-editing-in-the-ipythonjupyter-notebook/">this blog</a> and <a href="http://stackoverflow.com/a/35342269">this SO answer</a>):
+
+        <!-- <script src="https://gist.github.com/raggleton/d75e9b98ea92039d35a7577c6d21aa47.js"></script> -->
+
+        <pre>require(["codemirror/keymap/sublime", "notebook/js/cell", "base/js/namespace"],
+    function(sublime_keymap, cell, IPython) {
+        // setTimeout(function(){ // uncomment line to fake race-condition
+        cell.Cell.options_default.cm_config.keyMap = 'sublime';
+        var cells = IPython.notebook.get_cells();
+        for(var cl=0; cl< cells.length ; cl++){
+            cells[cl].code_mirror.setOption('keyMap', 'sublime');
+        }
+
+        // }, 1000)// uncomment  line to fake race condition
+    }
+);</pre>
+        and the following into <code>~/.jupyter/custom/custom.css</code>:
+        <pre>/* Make the notebook cells take almost all available width */
+.container {
+        width: 85% !important;
+}
+
+/* Prevent the edit cell highlight box from getting clipped;
+ * important so that it also works when cell is in edit mode */
+div.cell.selected {
+        border-left-width: 1px !important;
+}</pre>
+        </li>
+      </ul>
+
+    <h2>ROOT setup</h2>
+
+    <ul>
+      <li><code>brew install root6</code></li>
+      <li><code>echo ". $(brew --prefix root6)/libexec/thisroot.sh" >> ~/.bash_profile</code></li>
+      <li><code>echo "Rint.Logon: ~/rootlogon.C" >> ~/.rootrc</code></li>
+      <li>Customise <code>~/rootlogon.C</code>, e.g. <pre>{
+    std::cout << " Using ROOT version " << gROOT->GetVersion()<< std::endl;
+}
+</pre></li>
+      <li>I also add in a little function to <code>~/.bash_profile</code> to auto-open a TBrowser if a ROOT file is passed on the command-line:</li>
+      <pre># Auto open a ROOT file with an associated TBrowser
+root () {
+    if [ -f "${1}" -a "${1: -5}" == ".root" ]; then
+        command root -l ~/browserOpen.C\(\""${1}"\"\)
+    else
+        command root -l $@
+    fi
+}</pre> which requires the existence of <code>~/browserOpen.C</code>:
+<pre>void browserOpen(TString filename) {
+  std::cout << "Opening " << filename << " as _file0" << std::endl;
+  TFile * _file0 = TFile::Open(filename, "READ");
+  TBrowser * _brow = new TBrowser();
+}</pre>
+    </ul>
+    Note that <code>import ROOT</code> will only work in python2, not 3.
+
+    <h2>R setup</h2>
+      (Only playing with for now)
+      <ul>
+        <li><code>brew install homebrew/science/r</code></li>
+        <br>
+        In R:
+        <li><code>install.packages("tidyverse")</code></li>
+        <li><code>install.packages(c("nycflights13", "gapminder", "Lahman"))</code></li>
+      </ul>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+  </body>
+</html>
